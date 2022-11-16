@@ -1,0 +1,10 @@
+node_modules
+ipfs-upload-client
+coverage
+artifacts
+cache
+metadata
+verify
+.env
+
+
