@@ -27,7 +27,7 @@ async function processFile(content) {
 
         // }
 
-        element["description"] = `MisicHeadClud NFTs collection`
+        element["description"] = `The Music Head Club is a collection of 10,000 unique NFTs residing on the Ethereum blockchain. Your Music Head is your membership to our music DAO.`
         element['image'] = `https://ipfs.io/ipfs/bafybeiarbmmq3neooyjrbikd6ikuuznc2u3cawzpdeosaho3jbpfny2hia/${element['edition']}.png`
         element["external_url"] = `https://musicheadclub.com/`
         fs.writeFile(`./metadata/json/ ${element['edition']}.json`, JSON.stringify(element, null, 2), (err) => {

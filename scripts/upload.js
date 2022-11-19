@@ -9,17 +9,17 @@ async function uploadToIpfs() {
 
     let uploadArray = []
 
-    for (i = 1; i <= 10; i++) {
+    for (i = 1; i <= 100; i++) {
 
         let element = {
-            path: `${i}.png`,
-            content: fs.readFileSync(`./metadata/images/${i}.png`, { encoding: 'base64' })
+            path: `${i}.json`,
+            content: fs.readFileSync(`./metadata/json/ ${i}.json`, { encoding: 'base64' })
         }
 
         uploadArray.push(element)
     }
 
-    console.log(uploadArray)
+    //console.log(uploadArray)
 
     const response = await Moralis.EvmApi.ipfs.uploadFolder({
         abi: uploadArray,
