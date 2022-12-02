@@ -1,19 +1,38 @@
 
+### Please replace with you details, The values below are not real
+
+PRIVATE_KEY=ee91f26be937822b73a2cab041e1bf65d986b6639319ddb297a9a0cb6131qw34
+ETHERSCAN_API_KEY=F78D6QZQCYTW6N8KCNEXHEPF82KZAWRtfc
+MAINNET_URL=https://mainnet.infura.io/v3/2fb04d7a47b640f18ba2f704d0b7we6d
 
 
-POLYGON_MUMBAI_ALCHEMY=https://polygon-mumbai.g.alchemy.com/v2/<key>
+### Do not replace this Below
 
-MNEMONIC=""
+IMAGES=https://ipfs.io/ipfs/bafybeiarbmmq3neooyjrbikd6ikuuznc2u3cawzpdeosaho3jbpfny2hia
+METADATA='https://ipfs.io/ipfs/bafybeifictgth44bpdkcuyt4uvufpuuodsge3bgaydvc63ewldomh6cjj4/'
 
-Json=ttps://ipfs.io/ipfs/<hash>/
-
+### Once you deploy please enter the Mainnet address below
+Main
+MUSICHEAD=
+Goerli
+##MUSICHEAD=0xf8A1B1a32970160c7ea8Db4d137D0034605221aB
 mumbai
-CollectionMinter Deployed at:
-CM=
-VAS Rewards Deployed at:
-VR=
-NEON PET Collection deployed at: 
-NP=
+MUSICHEAD=0x23774Ea0CA2469b569511C514dA5fEcDd64319fF
+BSC
+#MUSICHEAD=0x7246611e05A926D0214d70fD5207f988fECaAa68
+
+
+### commands 
+
+npx hardhat run scripts/deploy.js --network main
+
+npx hardhat verify --network main 0x7246611e05A926D0214d70fD5207f988fECaAa68 "https://ipfs.io/ipfs/bafybeifictgth44bpdkcuyt4uvufpuuodsge3bgaydvc63ewldomh6cjj4/"
+
+npx hardhat run scripts/interact.js --network main
+
+
+
+
 
 
 

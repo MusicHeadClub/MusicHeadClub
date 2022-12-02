@@ -9,7 +9,7 @@ async function main() {
     //deploy 
     this.musichead = await this.musichead.deploy(process.env.METADATA)
     //get deployed address
-    console.log(`MusicHead=${this.musichead.address}`)
+    console.log(`MUSICHEAD=${this.musichead.address}`)
 }
 
 main().catch(

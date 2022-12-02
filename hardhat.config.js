@@ -38,6 +38,11 @@ module.exports = {
       }
 
     },
+
+    main: {
+      url: process.env.MAINNET_URL,
+      accounts: [process.env.PRIVATE_KEY]
+    },
     ropsten: {
       url: process.env.ROPSTEN_URL,
       accounts: {
@@ -111,8 +116,8 @@ module.exports = {
     currency: "USD",
   },
   etherscan: {
-    //apiKey: process.env.ETHERSCAN_API_KEY,
-    apiKey: process.env.POLYGON_MUMBAI_API_KEY,
+    apiKey: process.env.BSCSCAN_API_KEY,
+    //apiKey: process.env.POLYGON_MUMBAI_API_KEY,
   },
 
   solidity: {

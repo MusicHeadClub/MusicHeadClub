@@ -15,14 +15,15 @@ async function main() {
     console.log(`Mint Fee: ${formatEther(await this.musicHead.mintFee())}`)
     const mintFee = await this.musicHead.mintFee()
 
-    //activate
-    const txa = await this.musicHead.ActivateSale()
-    await txa.wait()
+    // ////activate
+    // const txa = await this.musicHead.ActivateSale()
+    // await txa.wait()
 
-    console.log(await this.musicHead.saleIsActive())
+    // console.log(await this.musicHead.saleIsActive())
 
     //mint NFTs
-    const txp = await this.musicHead.publicMint(2, { value: mintFee * 2 })
+    const mintAmount = 10
+    const txp = await this.musicHead.publicMint(mintAmount, { value: mintFee * mintAmount })
     await txp.wait()
     console.log(await this.musicHead.mintedAmount(owner.address))
 
