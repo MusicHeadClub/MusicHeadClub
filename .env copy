@@ -1,10 +1,11 @@
 
-### Please replace with you details, The values below are not real
+### Please replace with you details, The values below are not real. 
+### Note that you may choose to enter PRIVATE_KEY or MNEMONIC.
 
 PRIVATE_KEY=ee91f26be937822b73a2cab041e1bf65d986b6639319ddb297a9a0cb6131qw34
 ETHERSCAN_API_KEY=F78D6QZQCYTW6N8KCNEXHEPF82KZAWRtfc
 MAINNET_URL=https://mainnet.infura.io/v3/2fb04d7a47b640f18ba2f704d0b7we6d
-
+MNEMONIC='cancel attact unable elegant fight boat replace hand toast them attract heat'
 
 ### Do not replace this Below
 
@@ -22,7 +23,7 @@ BSC
 #MUSICHEAD=0x7246611e05A926D0214d70fD5207f988fECaAa68
 
 
-### commands 
+### run below commands to deploy, verify and mint NTFs
 
 npx hardhat run scripts/deploy.js --network main
 

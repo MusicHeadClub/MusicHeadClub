@@ -19,3 +19,4 @@ npm i
 ````
 ### Deploy collection
 Rename the `.env copy` file to `.env` and enter the required details as directed in that file.
+Run the commands also include the file.

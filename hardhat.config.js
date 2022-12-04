@@ -41,11 +41,17 @@ module.exports = {
 
     main: {
       url: process.env.MAINNET_URL,
-      accounts: [process.env.PRIVATE_KEY]
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : {
+        mnemonic: process.env.MNEMONIC,
+        path: "m/44'/60'/0'/0",
+        initialIndex: 0,
+        count: 10,
+        passphrase: "",
+      },
     },
     ropsten: {
       url: process.env.ROPSTEN_URL,
-      accounts: {
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : {
         mnemonic: process.env.MNEMONIC,
         path: "m/44'/60'/0'/0",
         initialIndex: 0,
@@ -59,7 +65,7 @@ module.exports = {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545",
       chainId: 97,
       gasPrice: 20000000000,
-      accounts: {
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : {
         mnemonic: process.env.MNEMONIC,
         path: "m/44'/60'/0'/0",
         initialIndex: 0,
@@ -70,7 +76,7 @@ module.exports = {
     roburna: {
       url: process.env.ROBURNA_URL || 'https://preseed-testnet-1.roburna.com/',
       //accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [process.env.PRIVATE_KEY0,process.env.PRIVATE_KEY1,process.env.PRIVATE_KEY2,process.env.PRIVATE_KEY3,process.env.PRIVATE_KEY4,process.env.PRIVATE_KEY5],
-      accounts: {
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : {
         mnemonic: process.env.MNEMONIC,
         path: "m/44'/60'/0'/0",
         initialIndex: 0,
@@ -82,7 +88,7 @@ module.exports = {
     },
     goerli: {
       url: process.env.GOERII_URL_AlCHEMY,
-      accounts: {
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : {
         mnemonic: process.env.MNEMONIC,
         path: "m/44'/60'/0'/0",
         initialIndex: 0,
@@ -92,7 +98,7 @@ module.exports = {
     },
     kovan: {
       url: process.env.KOVAN,
-      accounts: {
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : {
         mnemonic: process.env.MNEMONIC,
         path: "m/44'/60'/0'/0",
         initialIndex: 0,
@@ -102,7 +108,7 @@ module.exports = {
     },
     mumbai: {
       url: process.env.POLYGON_MUMBAI_ALCHEMY,
-      accounts: {
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : {
         mnemonic: process.env.MNEMONIC,
         path: "m/44'/60'/0'/0",
         initialIndex: 0,
